@@ -1,18 +1,40 @@
-## Server Side Code for App
+## Server Side Code for App Logger-Android
 
-### Running app
-`python main.py`
+### Requirements
+* Python 2.7
+* scipy
+* scikit-learn
+* reportlab
 
-### Debugging
-`python listen.py`
-* Will print everything the main script would see.
+### Main app
 * Requires access to port 12000
 
-### `run.py`
+#### `main.py`
+* Handles UDP packets from the Logger android application
+
+#### `listen.py`
+* Test script that prints UDP packets received to stdout, useful for debugging 
+
+#### `run.py`
 * Client side testing script
 
-### `main.py`
-* Currently handles UDP requests turning them into upper case
+#### `analyse.py`
+* Requires a text file in the same folder as the script, will use this to create a PDF with the results as a graph
+* Graph will be the cluster the data belongs to over time
+* Use {data, sample, testoutput, real_data}.txt are sample data files
+
+#### `graphs.py`
+* Contains the code for the line plot graphs
+
+
+### Other included scripts
+* Useful utilities
+
+#### `fix_data.py`
+* Fixes data that was recorded without proper line breaks
+
+#### `kmeans1.py`
+* Test file used during development, left in for reference
 
 ---
 ## Server Side Actions
@@ -39,9 +61,7 @@ loop
 - [x] Create the repo
 - [x] Get Ports working
 - [ ] Write out pseudocode for server actions
-- [ ] ???
 - [ ] Add threaded TCP Socket class that will attempt to send notification to the device
-- [ ] ???
 
 ### Extended Todo
 - [ ] Install Cassandra
