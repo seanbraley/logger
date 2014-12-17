@@ -2,7 +2,7 @@
 __author__ = 'Sean Braley, Meghan Brunner, Jenny Chien, Arthur Margulies'
 __copyright__ = "Copyright is held by the author/owner(s)."
 
-__license__ = "GPL"
+__license__ = "MIT"
 __version__ = "1.0.0"
 __maintainer__ = "Sean Braley"
 __email__ = "sean.braley@queensu.ca"
